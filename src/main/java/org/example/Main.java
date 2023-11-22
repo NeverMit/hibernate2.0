@@ -1,7 +1,11 @@
 package org.example;
 
+import org.hibernate.Session;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Session session=HibernateUtil.getSessionFactory().openSession();
+        session.close();
+        HibernateUtil.shutdown();
     }
 }

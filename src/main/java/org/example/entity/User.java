@@ -14,25 +14,25 @@ import java.util.Objects;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserData {
+public class User {
     @Id
-    @Column(name = "id", nullable = false)
-    private Long id;
-    @Basic
-    @Column(name = "email", nullable = false, length = -1)
-    private String email;
-    @Basic
-    @Column(name = "userpassword", nullable = false, length = -1)
-    private String userpassword;
-    @Basic
-    @Column(name = "username", nullable = false, length = -1)
-    private String username;
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String email;
+
+    private String username;
+
+    @Column(name = "userpassword")
+    private String userpassword;
+
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        UserData userData = (UserData) o;
+        User userData = (User) o;
         return Objects.equals(email, userData.email) && Objects.equals(userpassword, userData.userpassword) && Objects.equals(username, userData.username) && Objects.equals(id, userData.id);
     }
 

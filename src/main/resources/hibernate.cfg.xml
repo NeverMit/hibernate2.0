@@ -9,7 +9,7 @@
     <property name="connection.username">postgres</property>
     <property name="connection.password">rootroot</property>
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-    <mapping class="org.example.entity.UserData"/>
+    <mapping class="org.example.entity.User"/>
 
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
